@@ -1,0 +1,21 @@
+.form {
+  padding: 1rem;
+  max-width: 700px;
+  margin: auto;
+  .group {
+    margin-bottom: 1rem;
+    label {
+      display: inline-block;
+      margin-bottom: .4rem;
+      font-size: 1.1rem;
+    }
+    .control {
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      padding: .4rem .2rem;
+      font-size: 1.2rem;
+    }
+  }
+}

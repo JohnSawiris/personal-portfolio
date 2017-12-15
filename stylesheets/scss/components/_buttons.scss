@@ -1,0 +1,17 @@
+.btn {
+  padding: .8rem 2rem;
+  width: 25%;
+  height: 55px;
+  background: linear-gradient(to right, $white 50%, $darker-black 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  color: $black;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  transition: .6s ease-in;
+  &:hover {
+    background-position: right bottom;
+    color: $white;
+  }
+}

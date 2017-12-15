@@ -1,0 +1,72 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: $black;
+  font-family: $font-one;
+  color: $white;
+  padding: 1rem;
+  .nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1090px;
+    margin: auto;
+    .name, .code, .links {
+      position: relative;
+    }
+    .name {
+      margin-right: auto;
+      animation: slide-right 1.5s ease-in;
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+    .code {
+      font-size: 2rem;
+      margin: auto;
+      animation: slide-down 1s ease-in;
+    }
+    .links {
+      animation: slide-left 1.5s ease-in;
+      a {
+        color: $white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 1.4rem;
+        transition: color .4s ease-in;
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    top: -90px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}

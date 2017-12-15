@@ -1,0 +1,9 @@
+@mixin grid($cols) {
+  @for $i from 1 through $cols {
+    $value: ($i / $cols) * 100% - 1;
+    .col-#{$i} {
+      width: $value;
+      flex: 0 0 $value;
+    }
+  }
+}
