@@ -20,7 +20,7 @@
     }
     .name {
       margin-right: auto;
-      animation: slide-right 1.5s ease-in;
+      animation: slide-right .5s ease-in;
       @include tablet {
         margin: 0;
       }
@@ -41,7 +41,7 @@
     }
     .links {
       transition: .4s ease-in;
-      animation: slide-left 1.5s ease-in;
+      animation: slide-left .5s ease-in;
       @include tablet {
         display: none;
         animation: none;
@@ -86,7 +86,7 @@
         border-radius: 7px;
         background-color: $white;
         transform: rotate(0deg);
-        transition: .4s ease-in-out;
+        transition: .2s ease-in-out;
         &:nth-child(1) {
           top: 0;
         }

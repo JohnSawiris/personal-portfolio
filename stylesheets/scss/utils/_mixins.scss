@@ -3,7 +3,7 @@
     $value: ($i / $cols) * 100% - 1;
     .col-#{$i} {
       width: $value;
-      flex: 0 0 $value;
+      flex: 1 0 $value;
     }
   }
 }

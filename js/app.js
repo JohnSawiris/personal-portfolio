@@ -9,9 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
       navIcon.classList.remove('open');
     });
   }
-  console.log(navIcon);
+
   navIcon.addEventListener('click', function() {
     this.classList.toggle('open');
     links.classList.toggle('click');
   });//navIcon end
+
+  window.addEventListener('resize', function() {
+    if(window.outerWidth > 800) {
+      links.classList.remove('click');
+      navIcon.classList.remove('open');
+    }
+  });
 });
