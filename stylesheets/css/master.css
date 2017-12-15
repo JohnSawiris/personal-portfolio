@@ -572,6 +572,11 @@ img {
 .navbar .nav-wrap .links {
   animation: slide-left 1.5s ease-in;
 }
+@media screen and (max-width: 800px) {
+  .navbar .nav-wrap .links {
+    display: none;
+  }
+}
 .navbar .nav-wrap .links a {
   color: #efefef;
   text-decoration: none;
@@ -581,6 +586,42 @@ img {
 }
 .navbar .nav-wrap .links a:hover {
   color: #d25322;
+}
+.navbar .nav-wrap .nav-icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  cursor: pointer;
+  top: 15px;
+}
+.navbar .nav-wrap .nav-icon span {
+  display: block;
+  position: absolute;
+  height: 7px;
+  width: 100%;
+  border-radius: 7px;
+  background-color: #efefef;
+  transform: rotate(0deg);
+  transition: .4s ease-in-out;
+}
+.navbar .nav-wrap .nav-icon span:nth-child(1) {
+  top: 0;
+}
+.navbar .nav-wrap .nav-icon span:nth-child(2) {
+  top: 10px;
+}
+.navbar .nav-wrap .nav-icon span:nth-child(3) {
+  top: 20px;
+}
+.navbar .nav-wrap .nav-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.navbar .nav-wrap .nav-icon.open span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+.navbar .nav-wrap .nav-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
 }
 
 @keyframes slide-down {
