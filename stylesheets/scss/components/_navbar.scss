@@ -6,6 +6,9 @@
   font-family: $font-one;
   color: $white;
   padding: 1rem;
+  @include tablet {
+    padding-left: 0;
+  }
   .nav-wrap {
     display: flex;
     align-items: center;
@@ -18,6 +21,14 @@
     .name {
       margin-right: auto;
       animation: slide-right 1.5s ease-in;
+      @include tablet {
+        margin: 0;
+      }
+      h2 {
+        @include tablet {
+          margin-left: 1rem;
+        }
+      }
       a {
         color: $white;
         text-decoration: none;
@@ -29,9 +40,22 @@
       animation: slide-down 1s ease-in;
     }
     .links {
+      transition: .4s ease-in;
       animation: slide-left 1.5s ease-in;
       @include tablet {
         display: none;
+        animation: none;
+        &.click {
+          display: block;
+          position: absolute;
+          background-color: $black;
+          top: 68px;
+          width: 100%;
+          text-align: center;
+          a {
+            display: block;
+          }
+        }
       }
       a {
         color: $white;
@@ -45,11 +69,15 @@
       }
     }
     .nav-icon {
-      height: 50px;
+      display: none;
+      height: 35px;
       width: 50px;
       position: relative;
       cursor: pointer;
-      top: 15px;
+      top: 5px;
+      @include tablet {
+        display: block;
+      }
       span {
         display: block;
         position: absolute;
@@ -71,6 +99,7 @@
       }
       &.open span:nth-child(1) {
         transform: rotate(45deg);
+        top: 10px;
       }
       &.open span:nth-child(2) {
         width: 0;
@@ -78,6 +107,7 @@
       }
       &.open span:nth-child(3) {
         transform: rotate(-45deg);
+        top: 10px;
       }
     }
   }
